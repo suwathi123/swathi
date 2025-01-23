@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: #333;
+}
+
+.header {
+    background: rgba(255, 165, 0, 0.9); /* Orange */
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.header:hover {
+    background: rgba(255, 140, 0, 1); /* Darker Orange */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+}
+
+.about {
+    background: rgba(255, 200, 124, 0.9); /* Light Orange */
+}
+
+.projects {
+    background: rgba(255, 140, 0, 0.9); /* Dark Orange */
+}
+
+.project-card {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 223, 186, 0.9); /* Pale Orange */
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeIn 1s forwards 0.5s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+.contact {
+    background: rgba(255, 165, 0, 0.9); /* Orange */
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .project-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
